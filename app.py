@@ -158,6 +158,7 @@ if __name__ == "__main__":
     # Встановити webhook
     async def on_startup():
         webhook_url = "https://dava-bayer.onrender.com/webhook"
+        await bot.delete_webhook(drop_pending_updates=True)
         await bot.set_webhook(webhook_url)
 
     asyncio.run(on_startup())
